@@ -47,7 +47,15 @@ Undersampling is another technique to address class imbalance. Undersampling tak
 
 ## Summary
 
+Herein, we compared three sampling methods, Naive Random Oversampling, SMOTE Oversampling, Cluster Centroid Undersampling,to predict the credit risk. We use the LogisticRegression classifier and evaluate the model’s performance. Looking through the different sampling models, the accuracy score of three models were 66, 63, and 59 % and the recall rate for low risk 67, 64, 57 %. 
 
+
+. Generate a confusion 
+matrix.
+Print out the imbalanced classification report.
+
+
+Using these algorithms, you’ll resample the dataset, view the count of the target classes, train a logistic regression classification. 
 
 
 ## Task 2. Use the SMOTEENN Sampling Method
