@@ -16,7 +16,7 @@ Through each of these methods, I split my data into training and testing dataset
 
 ### Naive Random Oversampling
 
-![oversampling](images/Random_Random_overSampling.png)
+![oversampling](images/Random_overSampling.png)
 
 ### SMOTE Oversampling
 
