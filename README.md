@@ -1,36 +1,76 @@
 # Supervised_Machine_Learning
-Credit Risk Prediction Using  the Machine Learning Model
+**Credit Risk Prediction Using  the Machine Learning Model**
 
-The purpose of this analysis was to create a supervised machine learning model that could accurately predict credit risk. In order to complete this task, I used 6 different methods, which are:
+## Background
+The purpose of this analysis is to build and evaluate several machine
+learning models to predict credit risk. Being able to predict credit risk with different machine learning algorithms can help banks and financial institutions predict anomalies, reduce risk cases, monitor portfolios, and provide recommendations on what to do in cases of fraud. 
 
-1. Naive Random Oversampling
-2. SMOTE Oversampling
-3. Cluster Centroid Undersampling
-4. SMOTEENN Sampling
-5. Balanced Random Forest Classifying
-6. Easy Ensemble Classifying
 
-Through each of these methods, I split my data into training and testing datasets, and compiled accuracy scores, confusion matries, and classification reports as my results.
+## Objects
+1. Define machine learning algorithm used in data analytics and create training and test groups from a given data set.
+2. Implement and interpret the logistic regression, decision tree, random forest, and support vector machine (SVM) algorithms.
+3. Compare the advantages and disadvantages of each supervised learning
+algorithm and determine which supervised learning algorithm is best
+used for a given data set or scenario.
+4. Use ensemble and resampling techniques to to resolve class imbalance and improve model performance.
+
+
+## Software/Tools/Libraries
+* Jupyter Notebook 6.1.4 with numpy, pandas, pathlib, collections.   scikit-learn with train_test_split, LogisticRegression, balanced_accuracy_score, confusion_matrix,
+imbalanced-learn with classification_report_imbalanced,  RandomOverSampler, SMOTE, RandomUnderSampler, SMOTEENN.
+
+* Data Source: 
+LoanStats_2019Q1.csv (https://2u-data-curriculum-team.s3.amazonaws.com/datavizonline/module_17/Module-17-Challenge-Resources.zip)
+
+
+
+## Task 1. Use Resampling Models to Predict Credit Risk
+
+**Objects**: Using the knowledge of the imbalanced-learn and scikit-learn libraries, evaluate three machine learning models by using resampling to determine which is better at predicting credit risk. Use the oversampling RandomOverSampler and SMOTE algorithms, and  undersampling ClusterCentroids algorithm. 
 
 ## Results
 
 ### Naive Random Oversampling
+**Class imbalance** refers to a situation in which the existing classes in a dataset aren't equally represented. In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced.
 
 ![oversampling](images/Random_overSampling.png)
 
 ### SMOTE Oversampling
-
+The SMOTE Oversampling is synthetic minority oversampling technique. In SMOTE, new instances are interpolated to deal with unbalanced datasets. That is, for an instance from the minority class, a number of its closest neighbors is chosen. Based on the values of these neighbors, new values are created.
 
 ![SMOTE](images/SMOTE_oversampling.png)
 
 ### Cluster Centroid Undersampling
-
+Undersampling is another technique to address class imbalance. Undersampling takes the opposite approach of oversampling and the size of the majority class is decreased. In random undersampling, randomly selected instances from the majority class are removed until the size of the majority class is reduced, typically to that of the minority class.
 
 ![undersampling](images/RandomUnderSampling.png)
 
+## Summary
+
+
+
+
+## Task 2. Use the SMOTEENN Sampling Method
+
+**Objects**: Use a combinatorial approach of over- and undersampling with the SMOTEENN algorithm to determine if the results from the combinatorial approach are better at predicting credit risk than the resampling algorithms from task 1.
+
 ### SMOTEENN Sampling
+SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
+1. Oversample the minority class with SMOTE.
+2. Clean the resulting data with an undersampling strategy. If the two
+nearest neighbors of a data point belong to two different classes, that
+data point is dropped.
 
 ![SMOTEENN](images/SMOTEENN_combination_sampling.png)
+
+## Summary
+
+Using these algorithms, you’ll resample the dataset, view the count of the target classes, train a logistic regression classification. 
+Resampling with SMOTEENN did not work miracles, but some of the metrics show an improvement over undersampling.
+
+
+## Task 3. Use Ensemble Classifiers to Predict Credit Risk
+
 
 ### Balanced Random Forest Classifying
 
@@ -40,6 +80,12 @@ Through each of these methods, I split my data into training and testing dataset
 ### Easy Ensemble Classifying
 
 ![easy_ensemble](images/EasyEnsembleClassifier.png)
+
+## Summary
+
+
+
+
 
 ## Summary
 
@@ -61,3 +107,17 @@ After taking these two statistics over the others, we can look at the accurary s
 3. Balanced Random Forest Classifying (64.8%)
 
 After factoring in these three main statistics, the model that I would recommend to use for predicting high risk loans is the Easy Ensemble Classifying model.
+
+
+
+Using these algorithms, you’ll resample the dataset, view the count of the target classes, train a logistic regression classification. 
+In order to complete this task, I used 6 different methods, which are:
+
+1. Naive Random Oversampling
+2. SMOTE Oversampling
+3. Cluster Centroid Undersampling
+4. SMOTEENN Sampling
+5. Balanced Random Forest Classifying
+6. Easy Ensemble Classifying
+
+Through each of these methods, I split my data into training and testing datasets, and compiled accuracy scores, confusion matries, and classification reports as my results.
