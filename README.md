@@ -24,6 +24,8 @@ LoanStats_2019Q1.csv (https://2u-data-curriculum-team.s3.amazonaws.com/datavizon
 
 
 
+
+
 ## Task 1. Use Resampling Models to Predict Credit Risk
 
 **Objects**: Using the knowledge of the imbalanced-learn and scikit-learn libraries, evaluate three machine learning models by using resampling to determine which is better at predicting credit risk. Use the oversampling RandomOverSampler and SMOTE algorithms, and  undersampling ClusterCentroids algorithm. Using these algorithms, you’ll resample the dataset, view the count of the target classes, train a logistic regression classification. 
