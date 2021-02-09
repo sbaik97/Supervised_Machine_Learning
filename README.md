@@ -81,7 +81,7 @@ The concept of ensemble learning is the process of combining multiple models, li
 
 
 ### 3a. Balanced Random Forest Classifying
-BalancedRandomForestClassifier is one of ensemble method in which each tree of the forest will be provided a balanced bootstrap sample. Random forest is an extension of bagging that  that fits multiple models on different subsets of a training dataset, then combines the predictions from all models. The random forest involves selecting bootstrap samples from the training dataset and fitting a decision tree on each. From this Balanced Random Forest Classifying, a accuracy score, confusion matrix, imbalanced classificatopm report for the model and sorted_feature in descending_order were be generated.
+**Objects**: BalancedRandomForestClassifier is one of ensemble method in which each tree of the forest will be provided a balanced bootstrap sample. Random forest is an extension of bagging that  that fits multiple models on different subsets of a training dataset, then combines the predictions from all models. The random forest involves selecting bootstrap samples from the training dataset and fitting a decision tree on each. From this Balanced Random Forest Classifying, a accuracy score, confusion matrix, imbalanced classificatopm report for the model and sorted_feature in descending_order were be generated.
 
 **Accuracy score, confusion matrix, imbalanced classificatopm report**
 
@@ -125,5 +125,5 @@ To get a picture of the model performs in general the accurary score is also ran
 
 Overall, the ensemble classfing methos are more accurate and sensitive to to detect both highs and low-risk loan, as well as the accuracy. This is because the concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model, and therefore increase the overall performance of the model.
 
-## Recomandation
+## Recommendation
 It might be better to test the over- and under-sampling, and add the ensemble classification to increase the accuracy and sensitivity. We can also try to other types of ensemble algorism, such as GradientBoostedTree, and XGBoost models.
