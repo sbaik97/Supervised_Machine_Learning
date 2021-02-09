@@ -51,7 +51,7 @@ Undersampling is another technique to address class imbalance. Undersampling tak
 
 ![undersampling](images/RandomUnderSampling.png)
 
-### Summary
+### Section_1 Summary
 
 Herein, we compared three sampling methods, Naive Random Oversampling, SMOTE Oversampling, Cluster Centroid Undersampling,to predict the credit risk. We use the LogisticRegression classifier and evaluate the model’s performance. Looking through the different sampling models, the accuracy score of three models were 66, 63, and 59 % and the recall rate for high risk 66, 62, 51 %. All three sampling show that the precision ("pre" column) and recall ("rec" column) are high for the majority class, precision is low for the high_risk class.
 These Oversampling and undersamping showed low accuracy (59-66 %) and and the sensitivity is also very low (61-66 %). We may need more accuracy model to increase the accuracy and precision for the high_risk class. 
@@ -72,7 +72,7 @@ data point is dropped.
 
 ![SMOTEENN](images/SMOTEENN_combination_sampling.png)
 
-### Summary
+### Section_2 Summary
 Looking through the different sampling models, the accuracy score of three SMOTEENN Sampling were 64 % and the recall rate for high risk 70 %. This combinatorial sampling shows that the sensitive (recall) for high risk increases; however, the precision for the high risk class is still low (64%).  
 
 
@@ -99,7 +99,7 @@ The Easy Ensemble involves creating balanced samples of the training dataset by 
 
 ![easy_ensemble](images/EasyEnsembleClassifier.png)
 
-## Summary
+## Section_3 Summary
 
 Looking through the two Ensemble Classifying models, BalancedRandomForestClassifier and Easy Ensemble, the accuracy score were 79 and 92 % and the recall rate for high risk 91 and 94 % which is much higher than LogisticRegression model with over- and under- and their mixed-sampling methods. The precision for the high risk class is significantly increasing with these Ensemble Classifying models from 1 to 4 and 7% and the sensitivity (recall rate) for high risk also incrases to 67 and 90%. We also rank the importance of input variables in a natural way and the squence of impartance feature are 'total_rec_prncp', 'tatal_rec_int', 'total_pymnt_inv', 'total_pymnt_amnt' etc. 
 
