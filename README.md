@@ -69,22 +69,28 @@ Looking through the different sampling models, the accuracy score of three SMOTE
 
 
 ## Task 3. Use Ensemble Classifiers to Predict Credit Risk
+The concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model, and therefore increase the overall performance of the model. Using the knowledge of the imblearn.ensemble library, train and compare two different ensemble classifiers, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model. Using both algorithms, resample the dataset, view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 
 
 ### Balanced Random Forest Classifying
-
+BalancedRandomForestClassifier is one of ensemble method in which each tree of the forest will be provided a balanced bootstrap sample. Random forest is an extension of bagging that  that fits multiple models on different subsets of a training dataset, then combines the predictions from all models. The random forest involves selecting bootstrap samples from the training dataset and fitting a decision tree on each. From this Balanced Random Forest Classifying, a accuracy score, confusion matrix, imbalanced classificatopm report for the model and sorted_feature in descending_order were be generated.
 
 ![random_forest](images/BalancedRandomForestClassifier.png)
 
+ * Sorted_feature in descending_order
+
 ![sorted_feature_descending_order](images/sorted_feature_descending_order.png)
 
+
 ### Easy Ensemble Classifying
+
+
 
 ![easy_ensemble](images/EasyEnsembleClassifier.png)
 
 ## Summary
 
-
+The main difference is that all features (variables or columns) are not used; instead, a small, randomly selected subset of features (columns) is chosen for each bootstrap sample. This has the effect of de-correlating the decision trees (making them more independent), and in turn, improving the ensemble prediction.
 
 
 
