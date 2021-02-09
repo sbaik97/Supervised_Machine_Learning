@@ -57,6 +57,9 @@ Herein, we compared three sampling methods, Naive Random Oversampling, SMOTE Ove
 These Oversampling and undersamping showed low accuracy (59-66 %) and and the sensitivity is also very low (61-66 %). We may need more accuracy model to increase the accuracy and precision for the high_risk class. 
 
 
+
+
+
 ## Task 2. Use the SMOTEENN Sampling Method
 
 **Objects**: Use a combinatorial approach of over- and undersampling with the SMOTEENN algorithm to determine if the results from the combinatorial approach are better at predicting credit risk than the resampling algorithms from task 1.
@@ -74,6 +77,9 @@ data point is dropped.
 
 ### Section_2 Summary
 Looking through the different sampling models, the accuracy score of three SMOTEENN Sampling were 64 % and the recall rate for high risk 70 %. This combinatorial sampling shows that the sensitive (recall) for high risk increases; however, the precision for the high risk class is still low (64%).  
+
+
+
 
 
 ## Task 3. Use Ensemble Classifiers to Predict Credit Risk
@@ -104,6 +110,9 @@ The Easy Ensemble involves creating balanced samples of the training dataset by 
 Looking through the two Ensemble Classifying models, BalancedRandomForestClassifier and Easy Ensemble, the accuracy score were 79 and 92 % and the recall rate for high risk 91 and 94 % which is much higher than LogisticRegression model with over- and under- and their mixed-sampling methods. The precision for the high risk class is significantly increasing with these Ensemble Classifying models from 1 to 4 and 7% and the sensitivity (recall rate) for high risk also incrases to 67 and 90%. We also rank the importance of input variables in a natural way and the squence of impartance feature are 'total_rec_prncp', 'tatal_rec_int', 'total_pymnt_inv', 'total_pymnt_amnt' etc. 
 
 
+
+
+
 ## Overall Summary
 
 This analysis is trying to find the best model that can detect if a loan is high risk and it is important to find a model that lets the least amount of high risk loans pass through undetected. Herein, an accuracy score is not an appropriate or a meaningful performance metric; because it fails spectacularly at its job, detecting very small fraction of fraudulent transactions. However, the sensitivity (recall) for detecting a high risk is more important. After factoring recall statistics, the model recommended to use for predicting high risk loans is the Easy Ensemble Classifying model with a high value (90%). The models that scored high were:
@@ -123,7 +132,7 @@ To get a picture of the model performs in general the accurary score is also ran
 2. Balanced Random Forest Classifying (79%)
 3. Naive Random Oversampling (66%)
 
-Overall, the ensemble classfing methos are more accurate and sensitive to to detect both highs and low-risk loan, as well as the accuracy. This is because the concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model, and therefore increase the overall performance of the model.
+Overall, the ensemble classfing methos are more accurate and sensitive to detect both highs and low-risk loan, as well as the accuracy. This is because the concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model, and therefore increase the overall performance of the model.
 
 ## Recommendation
 It might be better to test the over- and under-sampling, and add the ensemble classification to increase the accuracy and sensitivity. We can also try to other types of ensemble algorism, such as GradientBoostedTree, and XGBoost models.
