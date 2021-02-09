@@ -99,7 +99,7 @@ The Easy Ensemble involves creating balanced samples of the training dataset by 
 
 ![easy_ensemble](images/EasyEnsembleClassifier.png)
 
-## Section_3 Summary
+### Section_3 Summary
 
 Looking through the two Ensemble Classifying models, BalancedRandomForestClassifier and Easy Ensemble, the accuracy score were 79 and 92 % and the recall rate for high risk 91 and 94 % which is much higher than LogisticRegression model with over- and under- and their mixed-sampling methods. The precision for the high risk class is significantly increasing with these Ensemble Classifying models from 1 to 4 and 7% and the sensitivity (recall rate) for high risk also incrases to 67 and 90%. We also rank the importance of input variables in a natural way and the squence of impartance feature are 'total_rec_prncp', 'tatal_rec_int', 'total_pymnt_inv', 'total_pymnt_amnt' etc. 
 
