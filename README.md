@@ -33,15 +33,21 @@ LoanStats_2019Q1.csv (https://2u-data-curriculum-team.s3.amazonaws.com/datavizon
 ### Naive Random Oversampling
 **Class imbalance** refers to a situation in which the existing classes in a dataset aren't equally represented. In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced.
 
+**Accuracy score, confusion matrix, imbalanced classificatopm report**
+
 ![oversampling](images/Random_overSampling.png)
 
 ### SMOTE Oversampling
 The SMOTE Oversampling is synthetic minority oversampling technique. In SMOTE, new instances are interpolated to deal with unbalanced datasets. That is, for an instance from the minority class, a number of its closest neighbors is chosen. Based on the values of these neighbors, new values are created.
 
+**Accuracy score, confusion matrix, imbalanced classificatopm report**
+
 ![SMOTE](images/SMOTE_oversampling.png)
 
 ### Cluster Centroid Undersampling
 Undersampling is another technique to address class imbalance. Undersampling takes the opposite approach of oversampling and the size of the majority class is decreased. In random undersampling, randomly selected instances from the majority class are removed until the size of the majority class is reduced, typically to that of the minority class.
+
+**Accuracy score, confusion matrix, imbalanced classificatopm report**
 
 ![undersampling](images/RandomUnderSampling.png)
 
@@ -62,6 +68,8 @@ SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTE
 nearest neighbors of a data point belong to two different classes, that
 data point is dropped.
 
+**Accuracy score, confusion matrix, imbalanced classificatopm report**
+
 ![SMOTEENN](images/SMOTEENN_combination_sampling.png)
 
 ### Summary
@@ -75,16 +83,19 @@ The concept of ensemble learning is the process of combining multiple models, li
 ### Balanced Random Forest Classifying
 BalancedRandomForestClassifier is one of ensemble method in which each tree of the forest will be provided a balanced bootstrap sample. Random forest is an extension of bagging that  that fits multiple models on different subsets of a training dataset, then combines the predictions from all models. The random forest involves selecting bootstrap samples from the training dataset and fitting a decision tree on each. From this Balanced Random Forest Classifying, a accuracy score, confusion matrix, imbalanced classificatopm report for the model and sorted_feature in descending_order were be generated.
 
+**Accuracy score, confusion matrix, imbalanced classificatopm report**
+
 ![random_forest](images/BalancedRandomForestClassifier.png)
 
- * Sorted_feature in descending_order
+ **Sorted_feature in descending_order**
 
 ![sorted_feature_descending_order](images/sorted_feature_descending_order.png)
 
 
 ### Easy Ensemble Classifying
+The Easy Ensemble involves creating balanced samples of the training dataset by selecting all examples from the minority class and a subset from the majority class. Rather than using pruned decision trees, boosted decision trees are used on each subset, specifically the AdaBoost algorithm. AdaBoost works by first fitting a decision tree on the dataset, then determining the errors made by the tree and weighing the examples in the dataset by those errors so that more attention is paid to the misclassified examples and less to the correctly classified examples. A subsequent tree is then fit on the weighted dataset intended to correct the errors. The process is then repeated for a given number of decision trees.
 
-
+**Accuracy score, confusion matrix, imbalanced classificatopm report**
 
 ![easy_ensemble](images/EasyEnsembleClassifier.png)
 
